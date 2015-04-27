@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Tron</title>
+<link href="tron.css" rel=stylesheet type=text/css />
+<meta charset="UTF-8" />
+<script src="tron_2player.js"> </script>
+</head>
+
+<body onLoad='asknplayers();' onkeydown='turn(event);'>
+
+<canvas id=tron width=500 height=500 onClick='start(event);' style="float:left;">
+</canvas>
+<div style="float:left; color:black; padding-left:100px;"> 
+<div style="font-weight: bold;">Instructions: </div>
+<br /> <div id=instruction> Use the arrow keys to navigate. </div>
+<br /><br /> 
+<div style="font-weight: bold;">Your goal! </div>
+<br /> <div id=goal>Escape the walls and any trail left behind by your path. </div>
+<br /> <br /> 
+<dialog id="players_dialog">
+ Select no. of players:
+ <br /><br />
+ <form method="dialog" >
+  <input type=radio name=nplayers id=players1 checked=checked onClick='selnplayer();' /> 1 Player
+  <br />
+  <input type=radio name=nplayers id=players2 onClick='selnplayer();' /> 2 Players
+  <br /><br />
+  <input type=Submit value=Submit />
+ </form>
+</dialog>
+</div>
+</body>
+</html>
